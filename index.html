@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script
+<meta charset="UTF-8">
+<title>User Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+    <!-- LOGIN -->
+    <form id="loginForm">
+        
+        <h2>User Login</h2>
+        <p>Please enter your details</p>
+
+        <label>Email</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <input type="email" required>
+            </div>
+        
+        
+
+        <label>Password</label>
+        <div class="input-container">
+        <span class="glyphicon glyphicon-lock"></span>
+        <input type="email" required>
+        </div>
+        
+
+        <button>Login</button>
+
+        <div class="links">
+            <a onclick="showForgot()">Forgot password?</a>
+            <a onclick="showRegister()">New user? Register</a>
+           
+            
+            
+        </div>
+        <ul class="nav navbar-nav navbar-center">
+            <li class="active"><a href="menu.html"><span class="glyphicon glyphicon-arrow-left"></span></a></li>
+      
+          </ul>
+   
+    </form>
+
+    <!-- FORGOT PASSWORD -->
+    <form id="forgotForm" class="hide">
+        <h2>Reset Password</h2>
+
+        <label>Email: </label>
+        <div class="input-container">
+        <span class="glyphicon glyphicon-envelope"></span>
+        <input type="email" required>
+        </div>
+
+        <label>New Password</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-lock"></span>
+            <input type="Email" required>
+            </div>
+        
+
+        <label>Confirm Password</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-lock"></span>
+            <input type="password" required>
+            </div>
+        
+
+        <button>Update Password</button>
+
+        <div class="links">
+            <a onclick="showLogin()">Back to login</a>
+        </div>
+    </form>
+
+    <!-- REGISTER -->
+    <form id="registerForm" class="hide">
+        <h2>Create Account</h2>
+        
+        <div class="input-container">
+            <span class="glyphicon glyphicon-user"></span>
+            <input placeholder="First name" required>
+           
+        </div>
+
+        <div class="input-container">
+            <span class="glyphicon glyphicon-user"></span>
+            <input placeholder="Last name" required>
+           
+        </div>
+
+        <label>Email</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <input type="email" required>
+            </div>
+       
+
+        <label>Phone No</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-earphone"></span>
+            <input type="Phone No" required>
+        </div>
+    
+        <input type="Phone No" required>
+
+        <label>Gender</label>
+        <div class="gender">
+            <label><input type="radio" name="g"> Male</label>
+            <label><input type="radio" name="g"> Female</label>
+            <label><input type="radio" name="g"> other</label>
+        </div>
+
+        <label>Password</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-lock"></span>
+            <input type="password" required>
+            </div>
+        
+       
+
+        <label>Confirm Password</label>
+        <div class="input-container">
+            <span class="glyphicon glyphicon-lock"></span>
+            <input type="password" required>
+            </div>
+        <input type="password" required>
+
+        <button>Register</button>
+
+        <div class="links">
+            <a onclick="showLogin()">Already have account?</a>
+        </div>
+    </form>
+
+</div>
+
+<script>
+function showForgot(){
+    hideAll();
+    forgotForm.classList.remove("hide");
+}
+function showRegister(){
+    hideAll();
+    registerForm.classList.remove("hide");
+}
+function showLogin(){
+    hideAll();
+    loginForm.classList.remove("hide");
+}
+function hideAll(){
+    loginForm.classList.add("hide");
+    forgotForm.classList.add("hide");
+    registerForm.classList.add("hide");
+}
+</script>
+
+</body>
+</html>
